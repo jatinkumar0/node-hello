@@ -10,6 +10,12 @@ agent any
       }
     }
     
+    post {
+      always {
+      build job : 'deploy' 
+      }
+    }
+    
     
   }
 
