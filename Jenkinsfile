@@ -13,10 +13,9 @@ agent any
     stage('Deploy Container'){
       steps {
       sh '''
-         sudo su
-         docker stop node-hello
-         docker rm node-hello
-         docker run -itd -p 3000:3000 --name node-hello node-hello
+         sudo docker stop node-hello
+         sudo docker rm node-hello
+         sudo docker run -itd -p 3000:3000 --name node-hello node-hello
          '''
       }
     }
