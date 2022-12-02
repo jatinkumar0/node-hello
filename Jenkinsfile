@@ -15,7 +15,7 @@ agent any
       sh '''
          docker stop node-hello
          docker rm node-hello
-         docker run -itd -p 3000:3000 node-hello --name node-hello
+         docker run -itd -p 3000:3000 --name node-hello node-hello
          '''
       }
     }
