@@ -8,13 +8,16 @@ agent any
          sudo docker build -t node-hello .
          '''
       }
-    }
-    
-    post {
+
+      post {
       always {
       build job : 'deploy' 
       }
+    }  
+    
     }
+    
+
     
     
   }
