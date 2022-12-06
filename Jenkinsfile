@@ -11,7 +11,7 @@ agent any
 
       post {
       always {
-      build job : 'deploy' 
+        junit(testResults: 'target/surefire-reports/*.xml', allowEmptyResults : true)
       }
     }  
     
